@@ -75,7 +75,7 @@ ProjectSettings
 
 
 *.DotSettings
-
+DenMother/\.vs
 Uncanny/\.idea/
 
 Codebase/RandomGenerator/\.idea/
