@@ -121,3 +121,7 @@ DenMother/ProjectSettings/TagManager\.asset
 DenMother/ProjectSettings/TimeManager\.asset
 
 DenMother/ProjectSettings/UnityConnectSettings\.asset
+
+DenMother/Assets/Plugins\.meta
+
+DenMother/Assets/Plugins/Editor\.meta

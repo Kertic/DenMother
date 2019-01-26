@@ -32,22 +32,21 @@ namespace Structure
 
         public void EatAStoredFood()
         {
-
-
-            if (FoodLevel == 0) 
+            if (FoodLevel == 0.0f)
             {
                 // player Die here
-
             }
+
             if (storageHealth == 0)
             {
                 // print a message tells player that storage health is empty
             }
 
-            //Remove a food from storeageHealth and increase FoodLevel by some amount
-            storageHealth -= 1;
+            //Remove a food from storage Health and increase FoodLevel by some amount
+            if (storageHealth > 0)
             {
-            FoodLevel += foodValue;
+                storageHealth -= 1;
+                FoodLevel += foodValue;
             }
         }
 
@@ -64,11 +63,13 @@ namespace Structure
                           MaxNestHealth + ". Instead set it to Max");
             }
         }
+
         public void SetFoodStorage(int newFoodStorage)
         {
             if (newFoodStorage < 0)
             {
-                Debug.Log("Attempted to set food storage to negative number: " + newFoodStorage + " Instead set it to 0");
+                Debug.Log(
+                    "Attempted to set food storage to negative number: " + newFoodStorage + " Instead set it to 0");
             }
 
             if (newFoodStorage > MaxNestHealth)
