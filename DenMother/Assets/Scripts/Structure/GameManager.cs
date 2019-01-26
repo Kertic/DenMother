@@ -16,7 +16,6 @@ namespace Structure
         public int storageHealth { get; private set; }
         public float EggWarmth;
         public float FoodLevel;
-
         public GameObject Mother;
 
         // Use this for initialization
