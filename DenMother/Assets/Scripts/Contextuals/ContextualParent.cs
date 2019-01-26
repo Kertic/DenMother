@@ -25,7 +25,7 @@ namespace Contextuals
             if (AreTwoRectsColliding(motherTransform, contextualTransform))
             {
                 prompt.enabled = true;
-                if (Input.GetButton("Interact"))
+                if (Input.GetButtonDown("Interact"))
                 {
                    onPressEvent.Invoke(); 
                 }
