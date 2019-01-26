@@ -6,10 +6,7 @@ namespace Structure
     {
         [SerializeField] private float movementSpeed;
 
-        // Use this for initialization
-        void Start()
-        {
-        }
+      
 
 
         private void FixedUpdate()
