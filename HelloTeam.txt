@@ -17,8 +17,8 @@ You can go out and forage for food, and forage for supplies, but it takes you as
 
 
 ///NEW TASKS///
-Incubate the egg
-Collect food from the pile
+-----Incubate the egg
+-----Collect food from the pile
 Go out and get food
 Daily progression
 Seasonsal dials
