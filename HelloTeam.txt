@@ -21,9 +21,9 @@ Incubate the egg
 Collect food from the pile
 Go out and get food
 Daily progression
-Seasonsal dials
+Seasonal dials
 Raiders coming in
 egg hatching
 Mothers food level
 Eggs warmth level
-Timer for how long youve been out / Ticking down when you want to come back
+Timer for how long you’ve been out / Ticking down when you want to come back
