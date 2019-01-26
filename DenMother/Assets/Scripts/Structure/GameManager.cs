@@ -12,10 +12,11 @@ namespace Structure
         public int MaxStorageHealth = 3;
 
         //These are the actual healths of those two items. Use the mutator(s) to modify them.
-        public int nestHealth { get; private set; }
-        public int storageHealth { get; private set; }
+        public int nestHealth;
+        public int storageHealth;
         public float EggWarmth;
         public float FoodLevel;
+        public float foodValue;
 
         public GameObject Mother;
 
@@ -27,6 +28,27 @@ namespace Structure
         // Update is called once per frame
         void Update()
         {
+        }
+
+        public void EatAStoredFood()
+        {
+
+
+            if (FoodLevel == 0) 
+            {
+                // player Die here
+
+            }
+            if (storageHealth == 0)
+            {
+                // print a message tells player that storage health is empty
+            }
+
+            //Remove a food from storeageHealth and increase FoodLevel by some amount
+            storageHealth -= 1;
+            {
+            FoodLevel += foodValue;
+            }
         }
 
         public void SetNestHealth(int newNestHealth)
