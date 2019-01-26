@@ -1,5 +1,7 @@
 ﻿using System.Security.AccessControl;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Contextuals
 {
@@ -7,8 +9,11 @@ namespace Contextuals
     {
         [SerializeField] private RectTransform motherTransform;
 
-        [SerializeField] private RectTransform ContextualTransform;
+        [SerializeField] private RectTransform contextualTransform;
 
+        [SerializeField] private Image prompt;
+
+        [SerializeField] private UnityEvent onPressEvent;
         // Use this for initialization
         void Start()
         {
@@ -17,12 +22,18 @@ namespace Contextuals
 
         private void FixedUpdate()
         {
-            //If the transforms are intersecting	
-            if(Input.GetButton("Interact"))
-                if(AreTwoRectsColliding(motherTransform,ContextualTransform))
-                    Debug.Log("They are colliding");
-                else
-                    Debug.Log("They are not colliding");
+            if (AreTwoRectsColliding(motherTransform, contextualTransform))
+            {
+                prompt.enabled = true;
+                if (Input.GetButton("Interact"))
+                {
+                   onPressEvent.Invoke(); 
+                }
+            }
+            else
+            {
+                prompt.enabled = false;
+            }
         }
 
         public bool AreTwoRectsColliding(RectTransform rectA, RectTransform rectB)
