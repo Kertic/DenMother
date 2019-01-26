@@ -1,1 +1,14 @@
-Yall are cool af
+
+
+
+Nest health (3 segments)
+Egg warmth (float)
+Mother food level (float)
+Food storage (3 segments)
+Mother's position
+Controls
+If the mothers out
+if shits getting raided
+
+
+You can go out and forage for food, and forage for supplies, but it takes you as long to leave as it does to come back
