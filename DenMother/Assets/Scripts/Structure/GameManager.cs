@@ -21,6 +21,7 @@ namespace Structure
         public float EggDecayRate;
         public GameObject Mother;
 
+        public AudioSource _AudioSource;
         // Use this for initialization
         void Start()
         {
@@ -31,11 +32,12 @@ namespace Structure
         {
         }
 
+
         public void EatAStoredFood()
         {
             if (FoodLevel == 0.0f)
             {
-                // player Die here
+                GameLoss();
             }
 
             if (storageHealth == 0)
@@ -50,15 +52,18 @@ namespace Structure
                 FoodLevel += foodValue;
             }
         }
-
         public void CooldownTheEgg()
         {
             EggWarmth -= EggDecayRate;
             if (EggWarmth <= 0.0f)
             {
                 EggWarmth = 0.0f;
-                //GAME LOSS CONDITION
+                GameLoss();
             }
+        }
+        public void GameLoss()
+        {
+            //TODO: Lose Game
         }
         public void SetNestHealth(int newNestHealth)
         {
@@ -73,7 +78,6 @@ namespace Structure
                           MaxNestHealth + ". Instead set it to Max");
             }
         }
-
         public void SetFoodStorage(int newFoodStorage)
         {
             if (newFoodStorage < 0)

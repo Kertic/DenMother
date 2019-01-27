@@ -25,7 +25,7 @@ public class SeasonalDials : MonoBehaviour {
             else if (index == 1)
             { //summer
             }
-            else if (index === 2)
+            else if (index == 2)
             { //fall
             }
             else

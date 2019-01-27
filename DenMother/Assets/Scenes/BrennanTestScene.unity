@@ -504,7 +504,7 @@ Prefab:
     - target: {fileID: 114381926921371614, guid: 95a648f146c1b7442afd37ea1208581b,
         type: 2}
       propertyPath: onPressEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224306805088685030, guid: 95a648f146c1b7442afd37ea1208581b,
         type: 2}
@@ -639,6 +639,31 @@ Prefab:
         type: 2}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114381926921371614, guid: 95a648f146c1b7442afd37ea1208581b,
+        type: 2}
+      propertyPath: onPressEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114381926921371614, guid: 95a648f146c1b7442afd37ea1208581b,
+        type: 2}
+      propertyPath: onPressEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114381926921371614, guid: 95a648f146c1b7442afd37ea1208581b,
+        type: 2}
+      propertyPath: onPressEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1010021376}
+    - target: {fileID: 114381926921371614, guid: 95a648f146c1b7442afd37ea1208581b,
+        type: 2}
+      propertyPath: onPressEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CooldownTheEgg
+      objectReference: {fileID: 0}
+    - target: {fileID: 114381926921371614, guid: 95a648f146c1b7442afd37ea1208581b,
+        type: 2}
+      propertyPath: onPressEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95a648f146c1b7442afd37ea1208581b, type: 2}
@@ -852,6 +877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1010021377}
   - component: {fileID: 1010021376}
+  - component: {fileID: 1010021378}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -874,9 +900,10 @@ MonoBehaviour:
   MaxStorageHealth: 3
   nestHealth: 0
   storageHealth: 3
-  EggWarmth: 0
+  EggWarmth: 1
   FoodLevel: 0.5
   foodValue: 0.1
+  EggDecayRate: 0.1
   Mother: {fileID: 398262903}
 --- !u!4 &1010021377
 Transform:
@@ -891,6 +918,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1010021378
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010021375}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1084129798
 GameObject:
   m_ObjectHideFlags: 0
