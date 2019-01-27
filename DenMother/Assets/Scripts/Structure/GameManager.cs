@@ -122,6 +122,12 @@ namespace Structure
         public void GameLoss()
         {
             //TODO: Lose Game
+
+            //Audio
+            FindObjectOfType<AudioManager>().Play("Game over");
+
+            //Credit scene
+            FindObjectOfType<link2>().Changescene("credits");
         }
 
         public void SetNestHealth(int newNestHealth)

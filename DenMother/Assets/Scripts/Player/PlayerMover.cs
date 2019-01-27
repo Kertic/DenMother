@@ -7,7 +7,6 @@ namespace Structure
         [SerializeField] private float movementSpeed;
 
 
-
         public void SetMovementSpeed(float inMovementSpeed)
         {
             if (movementSpeed >= 0.0f)
@@ -16,26 +15,33 @@ namespace Structure
 
         private void FixedUpdate()
         {
-            if (Input.GetButton("Up"))
+            if (movementSpeed > 0.0f)
             {
-                transform.Translate(Vector3.up * movementSpeed);
-            }
+                GetComponent<Animator>().SetBool("isRunning", true);
+                if (Input.GetButton("Up"))
+                {
+                    transform.Translate(Vector3.up * movementSpeed);
+                }
+                else if (Input.GetButton("Down"))
+                {
+                    transform.Translate(Vector3.down * movementSpeed);
+                }
 
-            if (Input.GetButton("Down"))
-            {
-                transform.Translate(Vector3.down * movementSpeed);
-            }
+                else if (Input.GetButton("Left"))
+                {
+                    transform.Translate(Vector3.left * movementSpeed);
+                    transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                }
 
-            if (Input.GetButton("Left"))
-            {
-                transform.Translate(Vector3.left * movementSpeed);
-                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-            }
-
-            if (Input.GetButton("Right"))
-            {
-                transform.Translate(Vector3.right * movementSpeed);
-                transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+                else if (Input.GetButton("Right"))
+                {
+                    transform.Translate(Vector3.right * movementSpeed);
+                    transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+                }
+                else
+                {
+                    GetComponent<Animator>().SetBool("isRunning", false);
+                }
             }
         }
     }
