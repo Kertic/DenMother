@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class sound {
     public string name;
+
     public AudioClip clip;
 
     [Range(1f, 3f)]
