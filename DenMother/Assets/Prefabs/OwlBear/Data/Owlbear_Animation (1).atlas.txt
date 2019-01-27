@@ -1,0 +1,118 @@
+
+Owlbear_Animation (1).png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 2, 533
+  size: 443, 432
+  orig: 443, 432
+  offset: 0, 0
+  index: -1
+Elbow
+  rotate: false
+  xy: 583, 160
+  size: 174, 139
+  orig: 174, 139
+  offset: 0, 0
+  index: -1
+Eyes
+  rotate: false
+  xy: 356, 48
+  size: 144, 149
+  orig: 144, 149
+  offset: 0, 0
+  index: -1
+Feet
+  rotate: false
+  xy: 583, 301
+  size: 174, 176
+  orig: 174, 176
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 447, 479
+  size: 255, 317
+  orig: 255, 317
+  offset: 0, 0
+  index: -1
+Large Back Elbow
+  rotate: false
+  xy: 877, 816
+  size: 145, 149
+  orig: 145, 149
+  offset: 0, 0
+  index: -1
+Large Back Paw
+  rotate: false
+  xy: 766, 456
+  size: 178, 100
+  orig: 178, 100
+  offset: 0, 0
+  index: -1
+Large Back Shoulder
+  rotate: false
+  xy: 206, 2
+  size: 148, 166
+  orig: 148, 166
+  offset: 0, 0
+  index: -1
+Layer 24
+  rotate: false
+  xy: 2, 170
+  size: 310, 361
+  orig: 310, 361
+  offset: 0, 0
+  index: -1
+Paw
+  rotate: false
+  xy: 2, 8
+  size: 202, 160
+  orig: 202, 160
+  offset: 0, 0
+  index: -1
+PawBack
+  rotate: false
+  xy: 759, 224
+  size: 120, 81
+  orig: 120, 81
+  offset: 0, 0
+  index: -1
+Shoulder
+  rotate: false
+  xy: 314, 199
+  size: 267, 278
+  orig: 267, 278
+  offset: 0, 0
+  index: -1
+Small Back Thigh
+  rotate: false
+  xy: 759, 307
+  size: 142, 147
+  orig: 142, 147
+  offset: 0, 0
+  index: -1
+Small Elbow Paw
+  rotate: true
+  xy: 759, 132
+  size: 90, 111
+  orig: 90, 111
+  offset: 0, 0
+  index: -1
+Small Thigh
+  rotate: false
+  xy: 766, 558
+  size: 149, 176
+  orig: 149, 176
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: false
+  xy: 447, 736
+  size: 428, 229
+  orig: 428, 229
+  offset: 0, 0
+  index: -1
