@@ -25,7 +25,7 @@ namespace Structure
             {
                 uiFill.color = BlendColors(minColor, maxColor, Manager.FoodLevel);
                 uiFill.fillAmount = Manager.FoodLevel;
-                transform.Translate((Manager.Mother.transform.position - transform.position) + Vector3.up * YOffset);
+//                transform.Translate((Manager.Mother.transform.position - transform.position) + Vector3.up * YOffset);
             }
         }
 
