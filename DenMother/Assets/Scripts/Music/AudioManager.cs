@@ -57,34 +57,35 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
-    public void Play(string name)
-    {
-        sound s = Array.Find(Sound, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + name + "not found!");
-            return;
-        }
-        s.source.Play();
-    }
-
     //public void Play(string name)
     //{
-    //    float speed = 0.01f;
-    //    //StopAllCoroutines();
-    //    if (Sound != null)
-    //    {
-    //        StartCoroutine(FadeOut(Sound[0], speed));
-    //    }
-
     //    sound s = Array.Find(Sound, sound => sound.name == name);
     //    if (s == null)
     //    {
-    //        Debug.LogWarning("Sound: " + name + " not found!");
+    //        Debug.LogWarning("Sound: " + name + "not found!");
     //        return;
     //    }
-    //    StartCoroutine(FadeIn(s,speed));
+    //    s.source.Play();
     //}
+
+    public void Play(string name)
+    {
+        float speed = 0.01f;
+        //StopAllCoroutines();
+        if (Sound != null)
+        {
+            StartCoroutine(FadeOut(Sound[0], speed));
+        }
+
+        sound s = Array.Find(Sound, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        s.source.Play();
+        StartCoroutine(FadeIn(s,speed));
+    }
 
     private IEnumerator FadeOut(sound s,float speed)
     {
