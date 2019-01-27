@@ -17,7 +17,7 @@ public class TimeOut : MonoBehaviour {
     void Update()
     {
         timer += Time.deltaTime;
-        Comeback = Input.GetKeyDown(KeyCode.b); //press b to comeback
+        Comeback = Input.GetButtonDown("Interact"); //press e to comeback
 
         if (Comeback)
         {
