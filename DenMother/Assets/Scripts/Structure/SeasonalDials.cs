@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SeasonalDials : MonoBehaviour {
-    private float timeOfSeason;
+    private float seasonDuration;
     private float timer;
     string[] season = { "Spring", "Summer", "Fall","Winter"};
     private int index = 0;
@@ -33,12 +33,11 @@ public class SeasonalDials : MonoBehaviour {
             }
 
             //end of season
-            if (timer == timeOfSeason)
+            if (timer >= seasonDuration)
             {
                 //next season
                 index += 1;
                 timer = 0;
-                continue;
             }
         }
         //FINISH LEVEL
