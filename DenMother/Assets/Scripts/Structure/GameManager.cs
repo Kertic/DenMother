@@ -12,46 +12,63 @@ namespace Structure
         public int MaxStorageHealth = 3;
 
         //These are the actual healths of those two items. Use the mutator(s) to modify them.
-        public int nestHealth;
-        public int storageHealth;
+        public int NestHealth;
+        public int StorageHealth;
         public float EggWarmth;
         public float FoodLevel;
-        public float foodValue;
+        public float FoodValue;
 
         public float EggDecayRate;
+        public float FoodDecayRate;
         public GameObject Mother;
+        private bool isEggWarming;
+        private bool isMomOutside;
 
-        public AudioSource _AudioSource;
         // Use this for initialization
         void Start()
         {
+            isEggWarming = false;
+            isMomOutside = false;
         }
 
         private void FixedUpdate()
         {
-            CooldownTheEgg();
+            if (!isEggWarming)
+                CooldownTheEgg();
+            else
+            {
+                WarmEgg();
+            }
+
+            if (!isMomOutside)
+            {
+                RemoveFoodFromMom();
+            }
         }
 
 
         public void EatAStoredFood()
         {
-            if (FoodLevel == 0.0f)
+            if (FoodLevel <= 0.0f)
             {
                 GameLoss();
             }
 
-            if (storageHealth == 0)
+            if (StorageHealth == 0)
             {
                 // print a message tells player that storage health is empty
             }
 
             //Remove a food from storage Health and increase FoodLevel by some amount
-            if (storageHealth > 0)
+            if (StorageHealth > 0)
             {
-                storageHealth -= 1;
-                FoodLevel += foodValue;
+                StorageHealth -= 1;
+                FoodLevel += FoodValue;
+                if (FoodLevel >= 1.0f)
+                    FoodLevel = 1.0f;
             }
         }
+
         public void CooldownTheEgg()
         {
             EggWarmth -= EggDecayRate;
@@ -61,10 +78,38 @@ namespace Structure
                 GameLoss();
             }
         }
+
+        public void RemoveFoodFromMom()
+        {
+            FoodLevel -= FoodDecayRate;
+            if (FoodLevel <= 0.0f)
+            {
+                FoodLevel = 0.0f;
+                GameLoss();
+            }
+        }
+
+        public void WarmEgg()
+        {
+            EggWarmth += EggDecayRate;
+            if (EggWarmth >= 1.0f)
+            {
+                EggWarmth = 1.0f;
+                SetEggWarming(false);
+                Mother.GetComponent<PlayerMover>().SetMovementSpeed(5);
+            }
+        }
+
+        public void SetEggWarming(bool isEggWarm)
+        {
+            isEggWarming = isEggWarm;
+        }
+
         public void GameLoss()
         {
             //TODO: Lose Game
         }
+
         public void SetNestHealth(int newNestHealth)
         {
             if (newNestHealth < 0)
@@ -78,6 +123,7 @@ namespace Structure
                           MaxNestHealth + ". Instead set it to Max");
             }
         }
+
         public void SetFoodStorage(int newFoodStorage)
         {
             if (newFoodStorage < 0)
@@ -91,6 +137,11 @@ namespace Structure
                 Debug.Log("Attempted to set food storage to value:" + newFoodStorage + " greater than maximum of " +
                           MaxStorageHealth + ". Instead set it to Max");
             }
+        }
+
+        public void SetMomForaging(bool isMomForaging)
+        {
+            isMomOutside = isMomForaging;
         }
     }
 }

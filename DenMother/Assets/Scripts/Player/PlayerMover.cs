@@ -6,8 +6,13 @@ namespace Structure
     {
         [SerializeField] private float movementSpeed;
 
-      
 
+
+        public void SetMovementSpeed(float inMovementSpeed)
+        {
+            if (movementSpeed >= 0.0f)
+                movementSpeed = inMovementSpeed;
+        }
 
         private void FixedUpdate()
         {
