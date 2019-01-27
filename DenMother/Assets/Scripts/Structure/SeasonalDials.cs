@@ -14,7 +14,7 @@ public class SeasonalDials : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        while (true)
+        while (index < 4)
         {
             //start the timer
             timer += Time.deltaTime;
@@ -22,13 +22,13 @@ public class SeasonalDials : MonoBehaviour {
             if (index == 0)
             {//spring
             }
-            else if (index ==1)
+            else if (index == 1)
             { //summer
             }
-            else if (index ===2)
+            else if (index === 2)
             { //fall
             }
-            else 
+            else
             { //winter
             }
 
@@ -37,16 +37,10 @@ public class SeasonalDials : MonoBehaviour {
             {
                 //next season
                 index += 1;
-
-                //reset season
-                if (index > 4)
-                {
-                    index = 0;
-                }
                 timer = 0;
                 continue;
             }
-
         }
+        //FINISH LEVEL
     }
 }
