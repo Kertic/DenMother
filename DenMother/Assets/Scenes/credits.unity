@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 505934212}
   - component: {fileID: 505934211}
   - component: {fileID: 505934214}
+  - component: {fileID: 505934215}
   m_Layer: 5
   m_Name: Back button
   m_TagString: Untagged
@@ -457,6 +458,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03f1337333c2c489d901eb73169a01b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &505934215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505934209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671747406b55a45c7b8980e9e5aaeec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &515008127
