@@ -71,7 +71,7 @@ public class AudioManager : MonoBehaviour
     public void Play(string name)
     {
         float speed = 0.01f;
-        //StopAllCoroutines();
+        StopAllCoroutines();
         if (Sound != null)
         {
             StartCoroutine(FadeOut(Sound[0], speed));
