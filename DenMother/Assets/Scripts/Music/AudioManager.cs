@@ -60,10 +60,10 @@ public class AudioManager : MonoBehaviour
     public void Play(string name)
     {
         float speed = 0.01f;
-        StopAllCoroutines();
+        //StopAllCoroutines();
         if (Sound != null)
         {
-            instance.StartCoroutine(FadeOut(Sound[0], speed));
+            StartCoroutine(FadeOut(Sound[0], speed));
         }
 
         sound s = Array.Find(Sound, sound => sound.name == name);
@@ -79,10 +79,12 @@ public class AudioManager : MonoBehaviour
     {
         keepFadeIn = false;
         keepFadeOut = true;
-        AudioSource oldSound = s.source;
-        while (oldSound.volume > 0 && keepFadeOut)
+        float audioVolume = s.source.volume;
+
+        while (s.source.volume >= speed && keepFadeOut)
         {
-            oldSound.volume -= speed;
+            audioVolume -= speed;
+            s.source.volume = audioVolume; 
             yield return new WaitForSeconds(0.1f);
         }
     }
