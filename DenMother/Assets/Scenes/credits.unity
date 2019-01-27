@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 505934212}
   - component: {fileID: 505934211}
   - component: {fileID: 505934214}
+  - component: {fileID: 505934215}
   m_Layer: 5
   m_Name: Back button
   m_TagString: Untagged
@@ -359,8 +360,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295.5, y: 150.99998}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -228.5, y: 147}
+  m_SizeDelta: {x: 176, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505934211
 MonoBehaviour:
@@ -433,8 +434,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 80e68c74a49204a3c89e9c645afb1b76, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -457,6 +458,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03f1337333c2c489d901eb73169a01b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &505934215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505934209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671747406b55a45c7b8980e9e5aaeec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &515008127
@@ -492,7 +504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -300}
+  m_AnchoredPosition: {x: 59, y: -307}
   m_SizeDelta: {x: 100, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &515008129
@@ -911,8 +923,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 88, y: 8}
-  m_SizeDelta: {x: 176, y: 252.6}
+  m_AnchoredPosition: {x: 109.2, y: 8}
+  m_SizeDelta: {x: 218.4, y: 252.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656246531
 MonoBehaviour:
@@ -946,19 +958,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Person 1
+  m_Text: 'Brennan Rodriguez
 
 
-    Person 2
+    Jacob Miller
 
-    Person 3
+    Genel Jumalon
 
 
-    Person 4
+    Abdulla Alkhelaifi
 
-    Person 5
+    Iris Nguyen
 
-    Person 6
 
 '
 --- !u!222 &1656246532
