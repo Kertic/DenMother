@@ -717,7 +717,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
-    loop: 0
+    loop: 1
 --- !u!4 &1476320557
 Transform:
   m_ObjectHideFlags: 0
