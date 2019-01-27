@@ -8,7 +8,7 @@ namespace Structure
 	{
 
 		public Image uiFill;
-
+		public Image bkFill;
 		public GameManager manager;	
 		// Use this for initialization
 		void Start () {
@@ -20,6 +20,7 @@ namespace Structure
 		{
 			uiFill.fillAmount = manager.timeSpentForaging / manager.forageDuration;
 			uiFill.gameObject.SetActive(uiFill.fillAmount >= 0.0f);
+			bkFill.gameObject.SetActive(uiFill.fillAmount >= 0.0f);
 		}
 	}
 }
