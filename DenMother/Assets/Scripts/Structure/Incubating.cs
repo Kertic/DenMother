@@ -18,5 +18,9 @@ public class Incubating : GameManager
     void Update()
     {
         EggWarmth += EggWarmth * rate * Time.deltaTime;
+        if (Input.GetButtonDown("Interact"))
+        {
+            return;
+        }
     }
 }

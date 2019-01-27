@@ -45,5 +45,7 @@ public class SeasonalDials : MonoBehaviour {
         //FINISH LEVEL
 
         //play credit screen
+        FindObjectOfType<link2>().Changescene("credits");
+        return;
     }
 }
