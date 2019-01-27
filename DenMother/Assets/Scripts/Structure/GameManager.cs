@@ -22,13 +22,16 @@ namespace Structure
         public float FoodDecayRate;
         public GameObject Mother;
         private bool isEggWarming;
-        private bool isMomOutside;
+        private bool isMomForaging;
 
+        public float timeSpentForaging;
+
+        public float forageDuration;
         // Use this for initialization
         void Start()
         {
             isEggWarming = false;
-            isMomOutside = false;
+            isMomForaging = false;
         }
 
         private void FixedUpdate()
@@ -40,9 +43,20 @@ namespace Structure
                 WarmEgg();
             }
 
-            if (!isMomOutside)
+            if (!isMomForaging)
             {
                 RemoveFoodFromMom();
+                timeSpentForaging = 0.0f;
+            }
+            else
+            {
+                timeSpentForaging += (1.0f / 60.0f);
+                if (timeSpentForaging >= forageDuration)
+                {
+                    timeSpentForaging = 0.0f;
+                    SetFoodStorage(StorageHealth + 1);
+                   SetMomForaging(false); 
+                } 
             }
         }
 
@@ -126,22 +140,26 @@ namespace Structure
 
         public void SetFoodStorage(int newFoodStorage)
         {
+            StorageHealth = newFoodStorage;
             if (newFoodStorage < 0)
             {
                 Debug.Log(
                     "Attempted to set food storage to negative number: " + newFoodStorage + " Instead set it to 0");
+                StorageHealth = 0;
             }
 
-            if (newFoodStorage > MaxNestHealth)
+            if (newFoodStorage > MaxStorageHealth)
             {
                 Debug.Log("Attempted to set food storage to value:" + newFoodStorage + " greater than maximum of " +
                           MaxStorageHealth + ". Instead set it to Max");
+                StorageHealth = MaxStorageHealth;
             }
         }
 
-        public void SetMomForaging(bool isMomForaging)
+        public void SetMomForaging(bool setIsMomForaging)
         {
-            isMomOutside = isMomForaging;
+            isMomForaging = setIsMomForaging;
+            Mother.SetActive(!setIsMomForaging);
         }
     }
 }
