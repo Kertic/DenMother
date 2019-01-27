@@ -69,7 +69,7 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
-        float speed = 2f;
+        float speed = 0.01f;
         StopAllCoroutines();
         if (Sound != null)
         {

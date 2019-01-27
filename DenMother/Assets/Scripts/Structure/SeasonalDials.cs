@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SeasonalDials : MonoBehaviour {
-    private float seasonDuration;
+    public float seasonDuration;
     private float timer;
-    string[] season = { "Spring", "Summer", "Fall","Winter"};
     private int index = 0;
     // Use this for initialization
     void Start () {
@@ -19,17 +18,20 @@ public class SeasonalDials : MonoBehaviour {
             //start the timer
             timer += Time.deltaTime;
 
-            if (index == 0)
-            {//spring
-            }
-            else if (index == 1)
-            { //summer
-            }
-            else if (index == 2)
-            { //fall
-            }
-            else
-            { //winter
+            switch (index)
+            {
+                case 0: //spring
+                    FindObjectOfType<AudioManager>().Play("spring");//music
+                    break;
+                case 1: //summer
+                    FindObjectOfType<AudioManager>().Play("spring");//music
+                    break;
+                case 2: //fall
+                    FindObjectOfType<AudioManager>().Play("winter");//music
+                    break;
+                default: //winter
+                    FindObjectOfType<AudioManager>().Play("winter");//music
+                    break;
             }
 
             //end of season
@@ -41,5 +43,7 @@ public class SeasonalDials : MonoBehaviour {
             }
         }
         //FINISH LEVEL
+
+        //play credit screen
     }
 }

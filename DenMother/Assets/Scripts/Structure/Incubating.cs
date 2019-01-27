@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Incubating : GameManager
 {
-    private float rate;
+    public float rate;
     // Use this for initialization
     void Start()
     {
+        //Audio
+        FindObjectOfType<AudioManager>().Play("Incubating");
 
     }
 
