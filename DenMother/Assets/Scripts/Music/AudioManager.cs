@@ -17,15 +17,16 @@ public class AudioManager : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //    return;
+        //}
+        instance = this;
         DontDestroyOnLoad(gameObject);
 
         foreach (sound s in Sound)
@@ -56,13 +57,24 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
+    //public void Play(string name)
+    //{
+    //    sound s = Array.Find(Sound, sound => sound.name == name);
+    //    if (s == null)
+    //    {
+    //        Debug.LogWarning("Sound: " + name + "not found!");
+    //        return;
+    //    }
+    //    s.source.Play();
+    //}
+
     public void Play(string name)
     {
         float speed = 0.01f;
-        StopAllCoroutines();
+        //StopAllCoroutines();
         if (Sound != null)
         {
-            instance.StartCoroutine(FadeOut(Sound[0], speed));
+            StartCoroutine(FadeOut(Sound[0], speed));
         }
 
         sound s = Array.Find(Sound, sound => sound.name == name);
@@ -71,6 +83,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
+        s.source.Play();
         StartCoroutine(FadeIn(s,speed));
     }
 
@@ -78,10 +91,12 @@ public class AudioManager : MonoBehaviour
     {
         keepFadeIn = false;
         keepFadeOut = true;
-        AudioSource oldSound = s.source;
-        while (oldSound.volume > 0 && keepFadeOut)
+        float audioVolume = s.source.volume;
+
+        while (s.source.volume >= speed && keepFadeOut)
         {
-            oldSound.volume -= speed;
+            audioVolume -= speed;
+            s.source.volume = audioVolume; 
             yield return new WaitForSeconds(0.1f);
         }
     }

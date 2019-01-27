@@ -124,7 +124,7 @@ namespace Structure
             //TODO: Lose Game
 
             //Audio
-            FindObjectOfType<AudioManager>().Play("Game over");
+            FindObjectOfType<AudioManager>().Play("Gameover");
 
             //Credit scene
             FindObjectOfType<link2>().Changescene("credits");
