@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class link : MonoBehaviour
+public class Link : MonoBehaviour 
 {
-    public void Changescene(string BrennanTestScene)
+    public void Changescene(string sceneName)
     {
-        SceneManager.LoadScene(BrennanTestScene);
-        if (Input.anyKeyDown)
-            SceneManager.LoadScene("BrennanTestScene");
+        if (sceneName == "credits")
+        {
+            FindObjectOfType<AudioManager>().Play("CreditSong");
+        }
 
+        SceneManager.LoadScene(sceneName);
     }
-    private void Update()
-    {
-        if (Input.anyKeyDown)
-            SceneManager.LoadScene("BrennanTestScene");
-    }
+
 }
