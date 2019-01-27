@@ -1,4 +1,4 @@
-
+﻿
 
 
 Nest health (3 segments)
@@ -24,6 +24,6 @@ Daily progression
 Seasonal dials
 Raiders coming in
 egg hatching
-Mothers food level
-Eggs warmth level
+---Mothers food level
+---Eggs warmth level
 Timer for how long you’ve been out / Ticking down when you want to come back

@@ -18,6 +18,7 @@ namespace Structure
         public float FoodLevel;
         public float foodValue;
 
+        public float EggDecayRate;
         public GameObject Mother;
 
         // Use this for initialization
@@ -50,6 +51,15 @@ namespace Structure
             }
         }
 
+        public void CooldownTheEgg()
+        {
+            EggWarmth -= EggDecayRate;
+            if (EggWarmth <= 0.0f)
+            {
+                EggWarmth = 0.0f;
+                //GAME LOSS CONDITION
+            }
+        }
         public void SetNestHealth(int newNestHealth)
         {
             if (newNestHealth < 0)
