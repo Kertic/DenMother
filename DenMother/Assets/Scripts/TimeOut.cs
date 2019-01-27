@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Structure;
 
-public class GoOut : MonoBehaviour {
+public class TimeOut : MonoBehaviour {
     public bool Comeback;
 
     public int storageHealth = FindObjectOfType<GameManager>().StorageHealth;
