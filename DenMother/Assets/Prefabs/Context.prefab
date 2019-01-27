@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motherTransform: {fileID: 0}
   contextualTransform: {fileID: 224306805088685030}
-  prompt: {fileID: 114302033389338686}
+  prompt: {fileID: 1665221643948694}
   onPressEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.28627452}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -149,7 +149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.1065369, y: -36.457977}
+  m_AnchoredPosition: {x: -210.7, y: 78}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224733062792588368

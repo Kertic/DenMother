@@ -11,7 +11,7 @@ namespace Contextuals
 
         [SerializeField] private RectTransform contextualTransform;
 
-        [SerializeField] private Image prompt;
+        [SerializeField] private GameObject prompt;
 
         [SerializeField] private UnityEvent onPressEvent;
         // Use this for initialization
@@ -24,7 +24,7 @@ namespace Contextuals
         {
             if (AreTwoRectsColliding(motherTransform, contextualTransform))
             {
-                prompt.enabled = true;
+                prompt.SetActive(true); 
                 if (Input.GetButtonDown("Interact"))
                 {
                    onPressEvent.Invoke(); 
@@ -32,16 +32,20 @@ namespace Contextuals
             }
             else
             {
-                prompt.enabled = false;
+                prompt.SetActive(false);
             }
         }
 
         public bool AreTwoRectsColliding(RectTransform rectA, RectTransform rectB)
         {
-            Vector2 originA = new Vector2(rectA.rect.xMin, rectA.rect.yMin) + rectA.anchoredPosition;
-            Vector2 originB = new Vector2(rectB.rect.xMin, rectA.rect.yMin) + rectB.anchoredPosition; 
-            Vector2 extentA = new Vector2(rectA.rect.xMax, rectA.rect.yMax) + rectA.anchoredPosition;
-            Vector2 extentB = new Vector2(rectB.rect.xMax, rectB.rect.yMax) + rectB.anchoredPosition;
+            Vector2 originA = new Vector2(rectA.rect.xMin, rectA.rect.yMin) +
+                              new Vector2(rectA.position.x, rectA.position.y);
+            Vector2 originB = new Vector2(rectB.rect.xMin, rectA.rect.yMin) +
+                              new Vector2(rectB.position.x, rectB.position.y);
+            Vector2 extentA = new Vector2(rectA.rect.xMax, rectA.rect.yMax) +
+                              new Vector2(rectA.position.x, rectA.position.y);
+            Vector2 extentB = new Vector2(rectB.rect.xMax, rectB.rect.yMax) +
+                              new Vector2(rectB.position.x, rectB.position.y);
             if (originA.y > extentB.y|| originB.y > extentA.y)
                 return false;
             if (originA.x > extentB.x || originB.x > extentA.x)
