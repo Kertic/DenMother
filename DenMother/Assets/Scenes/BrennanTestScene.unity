@@ -629,6 +629,11 @@ Prefab:
       propertyPath: _animationName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114501275388573416, guid: a214e0ed0c492aa47a7bf2f576715127,
+        type: 2}
+      propertyPath: Background
+      value: 
+      objectReference: {fileID: 1164578007}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a214e0ed0c492aa47a7bf2f576715127, type: 2}
   m_IsPrefabAsset: 0
@@ -1373,6 +1378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiFill: {fileID: 670703569}
+  bkFill: {fileID: 1707012967}
   manager: {fileID: 1010021376}
 --- !u!114 &670703569
 MonoBehaviour:
