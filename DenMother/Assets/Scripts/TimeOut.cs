@@ -6,7 +6,7 @@ using Structure;
 public class GoOut : MonoBehaviour {
     public bool Comeback;
 
-    public int storageHealth = FindObjectOfType<GameManager>().storageHealth;
+    public int storageHealth = FindObjectOfType<GameManager>().StorageHealth;
     public float requiredTime; //time require being outside to have +1 food
 
     private float timer;
@@ -45,7 +45,7 @@ public class GoOut : MonoBehaviour {
             randomnNum = Random.Range(0, 10);
             if (randomnNum > 7)
             {
-                var snatcher : GameObject 
+//                var snatcher : GameObject 
                 //den damaged || storageHealth decreased
             }
         }
