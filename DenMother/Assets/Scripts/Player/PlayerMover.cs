@@ -29,11 +29,13 @@ namespace Structure
             if (Input.GetButton("Left"))
             {
                 transform.Translate(Vector3.left * movementSpeed);
+                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             }
 
             if (Input.GetButton("Right"))
             {
                 transform.Translate(Vector3.right * movementSpeed);
+                transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
             }
         }
     }
