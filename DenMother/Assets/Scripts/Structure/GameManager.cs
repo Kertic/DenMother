@@ -127,7 +127,7 @@ namespace Structure
             FindObjectOfType<AudioManager>().Play("Gameover");
 
             //Credit scene
-            FindObjectOfType<link2>().Changescene("credits");
+            FindObjectOfType<linkGameOver>().Changescene("credits");
         }
 
         public void SetNestHealth(int newNestHealth)

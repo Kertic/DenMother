@@ -54,7 +54,13 @@ namespace Structure
             else
             {
                 //    GetComponent<Animator>().SetBool("isRunning", false);
+               if(movementSpeed > 0.0f) 
                 GetComponent<SkeletonAnimation>().AnimationName = "Idle";
+               else
+               {
+                   
+                GetComponent<SkeletonAnimation>().AnimationName = "Sleep";
+               }
             }
 
 

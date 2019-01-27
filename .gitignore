@@ -90,37 +90,7 @@ DenMother/Assets/Plugins/Editor/JetBrains/
 
 DenMother/Assets/Plugins/Editor/JetBrains\.meta
 
-DenMother/ProjectSettings/AudioManager\.asset
 
-DenMother/ProjectSettings/ClusterInputManager\.asset
-
-DenMother/ProjectSettings/DynamicsManager\.asset
-
-DenMother/ProjectSettings/EditorBuildSettings\.asset
-
-DenMother/ProjectSettings/EditorSettings\.asset
-
-DenMother/ProjectSettings/GraphicsSettings\.asset
-
-DenMother/ProjectSettings/NavMeshAreas\.asset
-
-DenMother/ProjectSettings/NetworkManager\.asset
-
-DenMother/ProjectSettings/Physics2DSettings\.asset
-
-DenMother/ProjectSettings/PresetManager\.asset
-
-DenMother/ProjectSettings/ProjectSettings\.asset
-
-DenMother/ProjectSettings/ProjectVersion\.txt
-
-DenMother/ProjectSettings/QualitySettings\.asset
-
-DenMother/ProjectSettings/TagManager\.asset
-
-DenMother/ProjectSettings/TimeManager\.asset
-
-DenMother/ProjectSettings/UnityConnectSettings\.asset
 
 
 DenMother/Assets/Plugins/Editor\.meta

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657934, g: 0.4964136, b: 0.5748189, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -360,7 +360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -228.5, y: 147}
+  m_AnchoredPosition: {x: -183.5, y: 235}
   m_SizeDelta: {x: 176, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505934211
@@ -872,10 +872,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Project Manager
-
-
-    Animators
+  m_Text: 'Artists
 
 
 
@@ -883,7 +880,7 @@ MonoBehaviour:
 
 
 
-    Special Thanks'
+'
 --- !u!222 &1426596920
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -958,17 +955,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Brennan Rodriguez
-
+  m_Text: '
 
     Jacob Miller
 
     Genel Jumalon
 
 
+
     Abdulla Alkhelaifi
 
     Iris Nguyen
+
+    Brennan Rodriguez
 
 
 '
